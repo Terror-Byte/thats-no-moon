@@ -35,13 +35,12 @@ public class Bullet : MonoBehaviour
         {
             // TODO: Do something when the bullet hits and enemy. (Destroy self and damage enemy)
 
-            /*
-             Enemy enemy = collision.GetComponent<Enemy>();
-             if (enemy)
-             {
-                enemy.TakeDamage(damage);
-             }
-             */
+            
+            Enemy enemy = collision.GetComponent<Enemy>();
+            if (enemy)
+            {
+               enemy.TakeDamage(damage);
+            }
 
             if (impactEffect)
                 Instantiate(impactEffect, transform.position, transform.rotation);

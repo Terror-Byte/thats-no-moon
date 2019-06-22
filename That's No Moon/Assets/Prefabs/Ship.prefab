@@ -151,7 +151,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3340970111792501455, guid: 7b45b4caed1f84949bf590ee8f42ec59,
     type: 3}
   rb: {fileID: 323421443}
-  fireRate: 1
+  fireRate: 0.1
   fireCooldown: 0
   accelerationForce: 100
   rotationForce: 10
