@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         {
             HealthZero();
         }
-        Debug.Log(Health);
+        // Debug.Log(Health);
     }
 
     protected virtual void HealthZero()

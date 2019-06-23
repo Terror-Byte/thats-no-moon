@@ -33,13 +33,11 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            // TODO: Do something when the bullet hits and enemy. (Destroy self and damage enemy)
-
-            
             Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy)
             {
-               enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage);
+                Debug.Log(enemy.Health);
             }
 
             if (impactEffect)
@@ -49,10 +47,30 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.collider.CompareTag("Enemy"))
+    //    {
+    //        // TODO: Do something when the bullet hits and enemy. (Destroy self and damage enemy)
+
+
+    //        Enemy enemy = collision.collider.GetComponent<Enemy>();
+    //        if (enemy)
+    //        {
+    //            enemy.TakeDamage(damage);
+    //        }
+
+    //        if (impactEffect)
+    //            Instantiate(impactEffect, transform.position, transform.rotation);
+
+    //        Destroy();
+    //    }
+    //}
+
     private void Destroy()
     {
         if (parent)
-            Destroy(parent.gameObject);
+            Destroy(parent);
         else
             Debug.LogError("Bullet parent prefab reference not set.");
     }

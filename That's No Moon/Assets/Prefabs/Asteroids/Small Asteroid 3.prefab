@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3340970111792501455
+--- !u!1 &284931361382501449
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3340970111792501454}
-  - component: {fileID: 1159436815}
+  - component: {fileID: 284931361382501463}
+  - component: {fileID: 284931361382501462}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Untagged
+  m_Name: Small Asteroid 3
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3340970111792501454
+--- !u!4 &284931361382501463
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340970111792501455}
+  m_GameObject: {fileID: 284931361382501449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34262794, y: 0.17958602, z: -0.05517436}
+  m_LocalPosition: {x: -1.73, y: 2.25, z: -0.1887116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3340970112106306855}
+  - {fileID: 284931362118225070}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1159436815
+--- !u!50 &284931361382501462
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340970111792501455}
+  m_GameObject: {fileID: 284931361382501449}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 25
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -53,7 +53,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!1 &3340970112106306852
+--- !u!1 &284931362118225057
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,38 +61,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3340970112106306855}
-  - component: {fileID: 3340970112106306854}
-  - component: {fileID: 6450435917825462121}
-  - component: {fileID: 1791383016}
+  - component: {fileID: 284931362118225070}
+  - component: {fileID: 284931362118225071}
+  - component: {fileID: 92141961}
+  - component: {fileID: 92141960}
   m_Layer: 0
-  m_Name: Bullet
-  m_TagString: Untagged
+  m_Name: Small Asteroid 3
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3340970112106306855
+--- !u!4 &284931362118225070
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340970112106306852}
+  m_GameObject: {fileID: 284931362118225057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3340970111792501454}
+  m_Father: {fileID: 284931361382501463}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3340970112106306854
+--- !u!212 &284931362118225071
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340970112106306852}
+  m_GameObject: {fileID: 284931362118225057}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -123,56 +123,71 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2de2b90a49c03b34b91ae75fb7d996ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 029c3ecb0bc0a3c4fa7471160839e1d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.03125, y: 0.0625}
+  m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6450435917825462121
-BoxCollider2D:
+--- !u!60 &92141961
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340970112106306852}
+  m_GameObject: {fileID: 284931362118225057}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.03125, y: 0.0625}
-    newSize: {x: 0.03125, y: 0.0625}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.03125, y: 0.0625}
-  m_EdgeRadius: 0
---- !u!114 &1791383016
+  m_Points:
+    m_Paths:
+    - - {x: 0.12939477, y: 0.1375215}
+      - {x: -0.015572429, y: 0.23350215}
+      - {x: -0.19275558, y: 0.17128897}
+      - {x: -0.14182663, y: -0.016803741}
+      - {x: -0.23212302, y: -0.16211843}
+      - {x: -0.15339994, y: -0.23390007}
+      - {x: 0.0025647879, y: -0.14857411}
+      - {x: 0.13811731, y: -0.23466277}
+      - {x: 0.23926651, y: -0.11941123}
+      - {x: 0.20938683, y: 0.04121089}
+      - {x: 0.23390007, y: 0.22853327}
+    - - {x: -0.03125, y: -0.0625}
+      - {x: -0.03125, y: 0.03125}
+      - {x: -0.125, y: -0.125}
+      - {x: -0.09375, y: -0.15625}
+--- !u!114 &92141960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3340970112106306852}
+  m_GameObject: {fileID: 284931362118225057}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a004092307553a64db1b2f4fedb93183, type: 3}
+  m_Script: {fileID: 11500000, guid: 9725a57d24aad6e4c8c0a32a0d4db108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 1159436815}
-  impactEffect: {fileID: 0}
-  parent: {fileID: 3340970111792501455}
+  parent: {fileID: 284931361382501449}
+  rb: {fileID: 284931361382501462}
+  onDeathSpawnPrefabs: []
+  onDeathExplosion: {fileID: 0}
+  asteroidType: 2

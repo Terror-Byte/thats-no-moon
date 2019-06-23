@@ -46,19 +46,19 @@ MonoBehaviour:
   sounds:
   - name: Laser
     clip: {fileID: 8300000, guid: 7a62ef7979f8cde46bcd53b2a95e4f53, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Explosion
     clip: {fileID: 8300000, guid: 26a44c65009f3b04fa7e78a7f657e249, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Acceleration
     clip: {fileID: 8300000, guid: 6c0b372930761604d8c84750e17f71e9, type: 3}
-    volume: 0.2
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
