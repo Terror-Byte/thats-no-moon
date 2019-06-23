@@ -51,6 +51,19 @@ public class BossAsteroid : Enemy
         currentStage.OnEnter();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            Ship s = collision.collider.GetComponent<Ship>();
+
+            if (s != null)
+                s.TakeDamage(25, rb.transform.position); //TODO: MAKE THE DAMAGE A VARIABLE AND NOT A MAGIC NUMBER
+            else
+                Debug.LogError("Object does not contain an instance of Ship class.");
+        }
+    }
+
     //protected override void HealthZero()
     //{
     //    // Call current stages healthzero? Either transition to the next stage or die.
