@@ -135,7 +135,8 @@ MonoBehaviour:
   parent: {fileID: 7368262126829708315}
   rb: {fileID: 7368262126829708314}
   onDeathSpawnPrefabs: []
-  onDeathExplosion: {fileID: 0}
+  onDeathExplosion: {fileID: 7930995741257682569, guid: bd07ba2c6d158b0458fc049795ab7635,
+    type: 3}
   asteroidType: 2
 --- !u!1 &7368262126829708315
 GameObject:

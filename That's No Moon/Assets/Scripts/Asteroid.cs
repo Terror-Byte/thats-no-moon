@@ -76,21 +76,27 @@ public class Asteroid : Enemy
                 go.GetComponent<Rigidbody2D>().AddForce(dir * nudgePower);
             }
         }
-        else
-        {
-            if (onDeathExplosion)
-            {
-                Instantiate(onDeathExplosion, rb.transform.position, rb.transform.rotation);
-                Destroy(parent);
-            }
-            else
-            {
-                Debug.LogError("OnDeathExplosion prefab not set.");
-            }
-        }
+        //else
+        //{
+        //    if (onDeathExplosion)
+        //    {
+        //        Instantiate(onDeathExplosion, rb.transform.position, rb.transform.rotation);
+        //        Destroy(parent);
+        //    }
+        //    else
+        //    {
+        //        Debug.LogError("OnDeathExplosion prefab not set.");
+        //    }
+        //}
 
         // Find a new sound!
         // AudioManager.instance.Play("Explosion");
+
+        if (onDeathExplosion)
+        {
+            Instantiate(onDeathExplosion, rb.transform.position, rb.transform.rotation);
+        }
+
         Destroy(parent);
     }
 }

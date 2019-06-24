@@ -193,5 +193,6 @@ MonoBehaviour:
   - {fileID: 8924706229937681686, guid: 8de68cbf195499c44b966c6ab72c16c0, type: 3}
   - {fileID: 7368262126829708315, guid: b37b468fc3558314f847ea9cbfd4f6b8, type: 3}
   - {fileID: 284931361382501449, guid: 4214cfb7bced75841a4cb92c91cbfb73, type: 3}
-  onDeathExplosion: {fileID: 0}
+  onDeathExplosion: {fileID: 7930995741257682569, guid: bd07ba2c6d158b0458fc049795ab7635,
+    type: 3}
   asteroidType: 1
