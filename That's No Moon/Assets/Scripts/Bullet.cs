@@ -45,6 +45,20 @@ public class Bullet : MonoBehaviour
 
             Destroy();
         }
+        else if (collision.CompareTag("Mine"))
+        {
+            Mine mine = collision.GetComponent<Mine>();
+
+            if (mine)
+            {
+                mine.Die();
+            }
+
+            if (impactEffect)
+                Instantiate(impactEffect, transform.position, transform.rotation);
+
+            Destroy();
+        }
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)

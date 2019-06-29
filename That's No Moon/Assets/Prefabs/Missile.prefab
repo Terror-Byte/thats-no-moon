@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 5090186102453403628}
   - component: {fileID: 5090186102453403601}
   - component: {fileID: 8275432530574630683}
-  m_Layer: 0
+  - component: {fileID: 839274177}
+  m_Layer: 8
   m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,11 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bccecef919b5b14283ca300aef0c30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  target: {fileID: 0}
   missileAnimator: {fileID: 5090186102453403628}
   rb: {fileID: 5090186102823677471}
-  accelerationForce: 10
-  rotationForce: 5
+  explosionPrefab: {fileID: 7930995741257682569, guid: bd07ba2c6d158b0458fc049795ab7635,
+    type: 3}
+  nextWaypointDistance: 3
 --- !u!58 &8275432530574630683
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,6 +136,34 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &839274177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5090186102453403626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &5090186102823677469
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5090186102823677468}
   - component: {fileID: 5090186102823677471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +209,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

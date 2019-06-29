@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1771450433}
   - component: {fileID: 1771450434}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boss Asteroid Shield Full
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +79,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1956861642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956861643}
+  m_Layer: 10
+  m_Name: Missile Launchers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1956861643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956861642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2096897501555786137}
+  - {fileID: 4621907022232485939}
+  - {fileID: 1386251736495789970}
+  - {fileID: 5201026116782192023}
+  - {fileID: 4278443571981761463}
+  - {fileID: 4532744116634808977}
+  - {fileID: 6306619217528220199}
+  - {fileID: 5689527160509197762}
+  m_Father: {fileID: 5879787036650800684}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5274042437369686161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8502078323406495268}
+  m_Layer: 10
+  m_Name: Mine Launchers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8502078323406495268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274042437369686161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5879787036650800684}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5879787036221465957
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +159,7 @@ GameObject:
   - component: {fileID: 5879787036221465952}
   - component: {fileID: 1530022845}
   - component: {fileID: 1530022848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boss Asteroid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -190,6 +258,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 5879787036650800687}
   rb: {fileID: 559655154}
+  missileLauncherParent: {fileID: 1956861642}
+  mineLauncherParent: {fileID: 0}
+  missileLaunchers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  mineLaunchers: []
 --- !u!1 &5879787036650800687
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5879787036650800684}
   - component: {fileID: 559655154}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boss Asteroid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -220,6 +300,8 @@ Transform:
   m_Children:
   - {fileID: 5879787036221465954}
   - {fileID: 1771450433}
+  - {fileID: 1956861643}
+  - {fileID: 8502078323406495268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -244,3 +326,603 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!1001 &1226814924580039583
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &4532744116634808977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1226814924580039583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1477491478975046329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &4278443571981761463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1477491478975046329}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3672863910401988759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &2096897501555786137 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 3672863910401988759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4385938631788220060
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.072
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &1386251736495789970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4385938631788220060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6995301472538309836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &5689527160509197762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6995301472538309836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7479580529053609113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.886
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.362
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &5201026116782192023 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7479580529053609113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8053914548932106557
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &4621907022232485939 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8053914548932106557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8675221153646916393
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1956861643}
+    m_Modifications:
+    - target: {fileID: 3450055757775493377, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_Name
+      value: Boss Asteroid Missile Launcher (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.742
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.445
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.094492055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5cce5e9eb38b6d4aa54404f6c3440a4, type: 3}
+--- !u!4 &6306619217528220199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3450055757775493390, guid: b5cce5e9eb38b6d4aa54404f6c3440a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8675221153646916393}
+  m_PrefabAsset: {fileID: 0}

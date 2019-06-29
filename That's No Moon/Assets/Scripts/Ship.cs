@@ -161,4 +161,12 @@ public class Ship : MonoBehaviour
             canFire = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Mine"))
+        {
+            collision.GetComponent<Mine>().Explode();
+        }
+    }
 }

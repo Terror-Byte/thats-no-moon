@@ -6,17 +6,42 @@ public class BossAsteroid : Enemy
 {
     BossStage currentStage;
     Dictionary<string, BossStage> bossStages;
+    public GameObject missileLauncherParent;
+    public GameObject mineLauncherParent;
+    [SerializeField]
+    Launcher[] missileLaunchers;
+    [SerializeField]
+    Launcher[] mineLaunchers;
 
     // Start is called before the first frame update
     void Start()
     {
         InitialiseStages();
+
+        if (missileLauncherParent)
+            missileLaunchers = missileLauncherParent.GetComponentsInChildren<Launcher>();
+        if (mineLauncherParent)
+            mineLaunchers = mineLauncherParent.GetComponentsInChildren<Launcher>();
     }
 
     // Update is called once per frame
     void Update()
     {
         currentStage.Update();
+
+        // DEBUG - Launch missile + mine launchers
+        if (Input.GetButtonDown("Jump"))
+        {
+            foreach (Launcher launcher in missileLaunchers)
+            {
+                launcher.GetComponentInChildren<Launcher>().Launch();
+            }
+
+            foreach (Launcher launcher in mineLaunchers)
+            {
+                launcher.GetComponentInChildren<Launcher>().Launch();
+            }
+        }
     }
 
     public override void TakeDamage(float damage)

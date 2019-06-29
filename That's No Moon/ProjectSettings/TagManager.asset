@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Mine
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -14,10 +16,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Missile
+  - Asteroids
+  - BossAsteroid
+  - BossAsteroidShield
   - 
   - 
   - 
@@ -41,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Launchers
+    uniqueID: 3516536263
     locked: 0
