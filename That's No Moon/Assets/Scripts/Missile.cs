@@ -69,7 +69,7 @@ public class Missile : MonoBehaviour
 
         // Get direction to next waypoint
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * accelerationForce * Time.deltaTime;
+        Vector2 force = direction * accelerationForce * Time.fixedDeltaTime;
 
         rb.AddForce(force);
 
